@@ -1,6 +1,6 @@
 %h1 Availible podcasts
 %article#podcasts
-  - @podcasts.each do |item|
+  - @playlist_items.each do |item|
     %section 
       %h2 #{item.display_title}
       %p #{item.display_description}

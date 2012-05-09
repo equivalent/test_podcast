@@ -4,11 +4,15 @@ class Podcast # < ActiveRecord::Base
     def first
       Podcast.new('http://www.zweistein.si/podcast/1605.xml')
     end
+  end
 
-    attr_reader :url
+  attr_reader :url
 
-    def initialize(url)
-      @url=url
-    end
+  def initialize(url)
+    @url=url
+  end
+
+  def playlists
+    @playlists ||= Feed::Pull.new(self).items
   end
 end

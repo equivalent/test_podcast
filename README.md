@@ -14,9 +14,13 @@ Each Feed::Item object after initialization will have methods like
 so I' will be able to call in (haml) views something like
 
 
-    = item.display_titel
+    = item.display_title
     = item.url
 
 
 I written some tests around this, I don't know if they are 100% passing
-when we run *rspec* I was just doing TDD in haste and  only red-green was in my head.
+when we run *rspec*, I was just doing TDD in haste and  only red-green was in my head.
+
+
+start rails server, and it will run (root page)
+

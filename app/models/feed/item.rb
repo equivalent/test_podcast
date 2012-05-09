@@ -7,10 +7,11 @@ module Feed
     end
 
     def initialize(item_hash)
-      @title =item_hash['title']
-      @description =item_hash['description']
-      @guid =item_hash['guid']
-      @pub_date =item_hash['pubDate']
+      p item_hash
+      @title =item_hash[:title]
+      @description =item_hash[:description]
+      @guid =item_hash[:guid]
+      @pub_date =item_hash[:pubDate]
     end
 
     def display_title

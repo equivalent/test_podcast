@@ -4,7 +4,7 @@ module Feed
 
     attr_reader :rss
     def initialize(podcast)
-      raise 'should be Podcast object' unless podcast.is_kind_of(Podcast)
+      raise 'should be Podcast object' unless podcast.is_a?(Podcast)
       @rss = SimpleRSS.parse(open(podcast.url).read)
     end
 
