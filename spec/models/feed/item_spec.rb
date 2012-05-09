@@ -18,7 +18,6 @@ describe Feed::Item do
     end
   end
 
-
   let(:item){demo_feed_pull.first}
 
   it 'should have title' do
@@ -30,4 +29,7 @@ describe Feed::Item do
     item.url.should be_present
     item.url.should be "http://podcast.sixteenofive.com/UMEK-BTIC-042.mp3"
   end
+
+
+  #... and so on
 end

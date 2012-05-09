@@ -25,5 +25,13 @@ module Feed
       @guid
     end
 
+    def file
+      url #and some other magic if needed
+    end
+
+    # def player
+    #   # we can also have general class for player (Player) witch will File.open(feed_item.url, 'r') and play that in Player
+    #   Player.new(self.url)
+    # end 
   end
 end

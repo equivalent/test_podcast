@@ -1,10 +1,11 @@
+require 'open-uri'
 module Feed
   class Pull
-    require 'open-uri'
+
     attr_reader :rss
-    def initialize(url=nil)
-      url = 'http://www.zweistein.si/podcast/1605.xml' if url.nil? # delete this if needed
-      @rss = SimpleRSS.parse(open(url).read)
+    def initialize(podcast)
+      raise 'should be Podcast object' unless podcast.is_kind_of(Podcast)
+      @rss = SimpleRSS.parse(open(podcast.url).read)
     end
 
     def items

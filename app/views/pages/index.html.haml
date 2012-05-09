@@ -4,5 +4,9 @@
     %section 
       %h2 #{item.display_title}
       %p #{item.display_description}
-      = link_to 'Listen now!', item.url
+
+      = link_to 'Listen now!', item.file, :class=>"play" 
+      <!-- some UJS to lunch flash player for podcast -->
+
+      = link_to 'Download podcast', item.url, :class=>"download"
 
