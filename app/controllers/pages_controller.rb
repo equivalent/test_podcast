@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def index
-    @podcasts = Feed.new
+    @podcasts = Feed::Pull.new
   end
 end
