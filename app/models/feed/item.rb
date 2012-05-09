@@ -18,7 +18,7 @@ module Feed
     end
 
     def display_description
-      @description
+      @description || 'no description'
     end
 
     def url

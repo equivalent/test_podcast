@@ -1,18 +1,8 @@
 %h1 Availible podcasts
 %article#podcasts
-  - @podcasts.each do |podcast|
+  - @podcasts.each do |item|
     %section 
-      %h2 #{podcast[:title]}
-      %p #{podcast[:description] || 'no description'}
-      = link_to 'Listen now!', podcast['guid']
-
-%h1 developer notes
-%p 
-  item itself should be really refactored to separete object (or part of feed like Feed::Item)
-  and we would just call
-  %code
-    podcast.display_title
-    podcast.display_url
-  
-      
+      %h2 #{item.display_title}
+      %p #{item.display_description}
+      = link_to 'Listen now!', item.url
 
