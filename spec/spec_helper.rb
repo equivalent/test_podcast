@@ -30,3 +30,16 @@ RSpec.configure do |config|
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
 end
+
+
+#refactor below to separate file
+def demo_feed
+  file = File.open "#{Rails.root.to_s}/spec/external_content/feed_samples.xml", 'r'
+  file.read
+end
+
+def demo_feed_pull
+    feed = Feed::Pull.new
+    feed.stub!(:rss).and_return(demo_feed)
+    return feed
+end
